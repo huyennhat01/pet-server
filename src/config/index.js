@@ -1,0 +1,13 @@
+module.exports = {
+  JWT_SECRET: process.env.ACCESS_TOKEN_KEY,
+  CLOUDINARY_NAME: process.env.CLOUDINARY_NAME,
+  CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
+  CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
+
+  VNP_TMNCODE: process.env.VNP_TMNCODE,
+  VNP_HASHSECRET: process.env.VNP_HASHSECRET,
+  VNP_URL: process.env.VNP_URL,
+  VNP_API: process.env.VNP_API,
+  VNP_RETURNURL: process.env.VNP_RETURNURL,
+  CLIENT_URL: process.env.CLIENT_URL,
+};
