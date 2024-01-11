@@ -43,7 +43,7 @@ const authAdminController = {
             id: user._id,
             name: user.name,
             photo: user.photo,
-            role: user.role.slug,
+            role: "ADM",
           }),
         });
       } else {
