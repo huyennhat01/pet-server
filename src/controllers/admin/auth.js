@@ -21,8 +21,9 @@ const authAdminController = {
       const { username, password } = req.body;
       const user = await adminModel
         .findOne({ username })
-        .populate({ path: "status" })
-        .populate({ path: "role" });
+     
+
+        console.log(user)
 
       if (!user) {
         return res.status(400).json({
@@ -34,16 +35,7 @@ const authAdminController = {
           },
         });
       }
-      if (user.status.slug == "tam-khoa") {
-        return res.status(400).json({
-          success: false,
-          error: {
-            keyPattern: {
-              message: "Tài khoản này đã bị khóa!",
-            },
-          },
-        });
-      }
+      
       if (user ) {
         return res.status(200).json({
           success: true,
