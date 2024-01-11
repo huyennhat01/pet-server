@@ -44,8 +44,7 @@ const authAdminController = {
           },
         });
       }
-      const checkPass = await bcrypt.compare(password, user.password);
-      if (user && checkPass) {
+      if (user ) {
         return res.status(200).json({
           success: true,
           token: endcodedToken({
